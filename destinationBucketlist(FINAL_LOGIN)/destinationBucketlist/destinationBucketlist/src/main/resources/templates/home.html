@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en" xmlns:th="https://www.thymeleaf.com">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Destination Bucketlist</title>
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand text-white" href="#">Destination Bucketlist</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active text-white" aria-current="page" href="/">Logout</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="available_destinations">Available Destinations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="my_destinations">My Destinations</a>
+                </li>
+            </ul>
+            <div>
+                <a class="nav-link text-white" href="destination_register">New Destination Register</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="container text-center my-5">
+    <h1>WELCOME TO DESTINATION BUCKETLIST</h1>
+    <h6>Destination Bucketlist Management Project for SSE
+
+        - la problemele propuse mai jos eu m-as comporta ca si un client care e concentrat pe obiective de business
+        si caruia nu ii pasa de aspectele tehnice; scopul e de a-i face pe viitorii programatori sa realizeze ca e
+        responsabilitatea lor ca viitori specialisti in informatie sa organizeze ideile clientului intr-un model
+        coerent, sa identifice nevoi suplimentare de informatie, sa elaboreze si sa confirme un set de teste care sa
+        asigure limitarea scopului proiectului si sa se asigure ca modelul dezvoltat de ei e mentenabil in viitor
+        -	daca mergem pe agile (kanban, scrum?) acestea merg mana in mana cu CI/CD; mai merg mana in mana cu
+        managementul schimbarii; merg mana in mana cu automatizarea documentatiei; eu chiar as insista pe toate
+        uneltele care sunt disponibile (asa numita “developer experience”); sunt limbaje care stau foarte bine la
+        capitolul unelte si aceste unelte sunt disponibile atat in IDEuri cat si pe Github ca actions; chiar cred ca
+        e fezabil sa le cerem toate astea pentru ca ecosistemele moderne permit si pentru ca e materia potrivita;
+        mai degraba as simplifica problemele ca sa lasam timp pentru folosirea tuturor uneltelor de developer
+        experience, inclusiv cu partea de modelare a lor
+        •	pentru partea de probleme eu inclin pentru web apps, pentru ca sunt cele mai raspandite, pentru ca toate
+        aplicatiile includ oricum o forma de comunicare cu exteriorul si pentru ca celelalte genuri de aplicatii
+        necesita cunostinte mult mai specializate; daca totusi vrem sa lasam optiuni as merge ca aceste probleme sa fie
+        formulate ca sa permita rezolvarea lor ca web apps sau ca aplicatii desktop; asadar:
+        •	clientul doreste o aplicatie ce sa ruleze pe serverul companiei, cu o interfata web/ cu un api pentru
+        aplicatiile de mobil si cu o zona de administrare a datelor
+        •	clientul doreste o aplicatie desktop de pe un calculator comun, unde angajatii se autentifica fiecare cu
+        contul lor si acceseaza interfata GUI (GTK, WxForms, Electron, Webkit sau chiar Ncurses dar cross platform)
+        a programului instalat pentru toti utilizatorii; as merge pentru aplicatie cross-platform ca sa avem modelare
+        de deployment/build pe diferite platforme
+        •	aplicatia lucrata in echipe de 3-4, coordonata prin git pe Github
+        •	cu Merge Requests aprobate de macar un coleg in branch-ul de main si rebase-uri;
+        •	MR-urile sa se foloseasca de Github actions pentru quality tools (alese in functie de limbaj)
+        •	si MRurile aprobate sa faca deployuri de verifcare (staging) cu rularea testelor;
+        •	releasurile verificate sunt tagged cu versiune si lanseaza build de versiune cu tot cu actions
+        (pipeline) de creare a changelogului, a documentatiei de model si a artefactelor;
+        •	deployul tagged marcheaza sfarsitul sprintului, se pot include in actions si metrici de sprint/issues
+        burned;
+        •	releasurile obligatoriu migreaza modelul de date daca e cazul, pentru developeri si client;
+        •	releasurile de staging au sample data daca e cazul;
+        •	se detaliaza explicit in model partea de update
+
+        Problema de rezolvat:
+
+        1.	create a personal private vacation destinations bucket list app; a vacation destination
+        is a place with a geolocation, title, image, description, stay dates; bucket list is private,
+        each employee should be able to register and add private items; employee should be able to manage
+        items, including removal; desktop app or web app; propose friendly display of items and ways to manage them;
+        ask at least one time for friendliness feedback from the customer and incorporate the changes in the app;
+        employee can cancel their account (GDPR) or modify it
+    </h6>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+</body>
+</html>
